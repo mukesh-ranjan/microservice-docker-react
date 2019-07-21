@@ -2,7 +2,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t mukeshranjan03/docker-microservice-react
- -f Dockerfile.dev .
+  - docker build -t mukeshranjan03/docker-microservice-react -f Dockerfile.dev .
  script:
-  -docker run mukeshranjan03/docker-microservice-react npm run test -- --coverage
+  - docker run mukeshranjan03/docker-microservice-react npm run test -- --coverage
